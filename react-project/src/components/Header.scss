@@ -1,0 +1,124 @@
+#search input[type="text"] {
+    padding: 8px;
+    border: none;
+    outline: none;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    margin-right: 5px;
+    width: 200px;
+    font-size: 14px;
+}
+
+#search button {
+    padding: 8px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#search button:hover {
+    background-color: #0056b3;
+}
+
+#logo-img {
+    width: 50px; /* Adjust the width as needed */
+    height: 10px; /* Maintain aspect ratio */
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 20px 80px;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 0 10px;
+  position: relative;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: black;
+  transition: 0.3s ease-in-out;
+}
+
+#navbar li a:hover {
+  color: cornflowerblue;
+}
+
+#navbar li a:hover:after,
+#navbar li a.active:after {
+  content: "";
+  width: 60%;
+  height: 2px;
+  background: cornflowerblue;
+  position: absolute;
+  bottom: -4px;
+  left: 15px;
+}
+
+#navbar li a.active:after {
+  color: cornflowerblue;
+}
+
+#mobile {
+  display: none;
+}
+
+@media screen and (max-width: 769px) {
+  nav {
+    padding: 20px;
+  }
+
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top:0px;
+    right: -300px;
+    width:300px;
+    height:100vh;
+    background: black;
+    box-shadow: 0px 40px 60px white;
+    padding:40px 0 10px;
+    transition: 0.3s ease-in-out;
+  }
+  #navbar li {
+    margin-bottom: 25px;
+  }
+  #navbar li a {
+    color: white;
+  }
+  #navbar.active{
+    right: 0px;
+  }
+
+  #mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #mobile i {
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+  }
+  #search{
+    display: none;
+  }
+}
